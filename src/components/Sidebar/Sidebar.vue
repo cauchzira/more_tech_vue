@@ -3,7 +3,7 @@
     <Avatar />
     <ul class="sidebar_list">
       <li class="sidebar_item" v-for="item in items" :key="item.title">
-      <router-link class="sidebar_item-link" :to="{path: item.url}">
+      <router-link class="sidebar_item-link" :class="{'active' : $route.name === item.name}" :to="{path: item.url}">
         <span>{{item.title}}</span>
       </router-link>
       </li>
@@ -24,11 +24,11 @@ export default {
   data() {
     return {
       items: [
-        {title: 'Маркетплейс', url:'/'},
-        {title: 'Личный кабинет', url:'/user'},
+        {title: 'Маркетплейс', url:'/', name: 'Feeds'},
+        {title: 'Личный кабинет', url:'/user', name: 'User'},
       ]
     }
-  }
+  },
 }
 </script>
 
