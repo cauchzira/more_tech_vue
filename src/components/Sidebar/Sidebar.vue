@@ -2,7 +2,11 @@
   <aside class="sidebar">
     <Avatar />
     <ul class="sidebar_list">
-      <li class="sidebar_item" v-for="item in items" :key="item.title">{{item.title}}</li>
+      <li class="sidebar_item" v-for="item in items" :key="item.title">
+      <router-link class="sidebar_item-link" :to="{path: item.url}">
+        <span>{{item.title}}</span>
+      </router-link>
+      </li>
     </ul>
     <button class="sidebar_logout-btn">
       Выход
@@ -20,11 +24,8 @@ export default {
   data() {
     return {
       items: [
-        {title: 'Лента', url:''},
-        {title: 'Сообщения', url:''},
-        {title: 'Маркетплейс', url:''},
-        {title: 'Мероприятия', url:''},
-        {title: 'Кошелёк', url:''},
+        {title: 'Маркетплейс', url:'/'},
+        {title: 'Личный кабинет', url:'/user'},
       ]
     }
   }
