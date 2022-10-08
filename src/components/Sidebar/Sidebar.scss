@@ -30,9 +30,41 @@
 	    box-shadow: inset 0 0 0 3px $primary-color;
     }
   }
-  &_item-link {
-    color: rgb(0, 170, 255);
-    font-size: 18px;
+  &_item {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 20px;
+    transition: all .5s ease;
+  }
+  &_item-link:active {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
     text-decoration: none;
-  } 
+    border-radius: 6px;
+    transition: all .5s ease;
+    &:hover {
+      color: #ffffff;
+      background-color: $primary-color;
+    }
+  }
+  &_item-link {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all .5s ease;
+    &:hover {
+      color: #ffffff;
+      background-color: $primary-color;
+    }
+  }
 }
+
+.active {
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #ffffff;
+  background-color: $primary-color;
+}
+
