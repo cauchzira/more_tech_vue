@@ -16,9 +16,8 @@
             <p>Пароль</p>
             <input v-model="password" ref="userpassword" type="password">
           </div>
-          <button class="login-btn" type="submit">Войти</button>
         </div>
-        <button class="btn">Войти</button>
+        <button class="btn" type="submit">Войти</button>
     </form>
   </div>
 </template>
