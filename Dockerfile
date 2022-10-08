@@ -14,5 +14,6 @@ RUN npm install
 COPY . .
 
 # build app for production with minification
+RUN npm i @vue/cli-service
 EXPOSE 8080
 CMD [ "npm", "run", "serve" ]
