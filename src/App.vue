@@ -4,7 +4,6 @@
       <Sidebar v-if="hideSide"/>
       <!-- <ModalView v-if="hideSide"/>
       <ModalCreate v-if="hideSide"/> -->
-      <Account v-if="hideSide"/>
       <router-view/>
     </section>
   </div>
