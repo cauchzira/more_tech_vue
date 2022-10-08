@@ -7,7 +7,7 @@ class AuthService extends BaseService {
   }
 
   async auth(data) {
-    const authUrl = "/api/v1/auth/login/";
+    const authUrl = "/api/v1/user/token";
     return await Request.post(authUrl, data);
   }
 
@@ -21,7 +21,7 @@ class AuthService extends BaseService {
   }
 
   async refresh() {
-    const refreshTokenUrl = "/api/v1/auth/refresh-tokens/";
+    const refreshTokenUrl = "/api/v1/user/token/refresh";
     const headers = {
       Authorization: `Bearer ${this.userToken}`
     };
@@ -38,14 +38,6 @@ class AuthService extends BaseService {
     return await Request.get(employeeUrl, { headers });
   }
 
-  async getPermission() {
-    const getUsersUrl = `/api/v1/management/permissions-user/`;
-    const headers = {
-      Authorization: `Bearer ${this.userToken}`
-    };
-
-    return await Request.get(getUsersUrl, { headers });
-  }
 }
 
 export default AuthService;

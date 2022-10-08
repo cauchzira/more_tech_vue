@@ -33,6 +33,7 @@
       border-radius: 4px;
     }
   }
+<<<<<<< Updated upstream
 }
 
 .btn {
@@ -40,4 +41,14 @@
     &:hover {
 	    color: white;
     }
+=======
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #e3e3e3;
+    width: 70px;
+    padding: 6px 10px;
+  }
+>>>>>>> Stashed changes
 }
