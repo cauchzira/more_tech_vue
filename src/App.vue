@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <section class="body">
-      <Sidebar v-if="hideSide" /> 
+      <Sidebar v-if="hideSide"/>
+      <!-- <ModalView v-if="hideSide"/>
+      <ModalCreate v-if="hideSide"/> -->
+      <Account v-if="hideSide"/>
       <router-view/>
     </section>
   </div>
@@ -9,15 +12,21 @@
 
 <script>
 import Sidebar from "@/components/Sidebar/Sidebar"
+import ModalView from "@/components/modal_view/ModalView.vue"
+import ModalCreate from "@/components/modal_view/ModalCreate.vue"
+import Account from "@/views/Account/Account.vue"
 export default {
   name: 'App',
   components: {
-    Sidebar
+    Sidebar,
+    ModalView,
+    ModalCreate,
+    Account
   },
   computed: {
     hideSide() {
       return this.$route.name !== 'Login'
-  }
+   }
   }
 }
 </script>
