@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # install project dependencies
-RUN npm install -g
+RUN npm install
 
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
 
 # build app for production with minification
-RUN npm install -g @vue/cli-service
+RUN npm install @vue/cli-service
 
 EXPOSE 8080
 CMD [ "npm", "run", "serve" ]
