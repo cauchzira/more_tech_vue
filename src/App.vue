@@ -40,5 +40,6 @@ export default {
 }
 .body {
   display: flex;
+  box-sizing: border-box;
 }
 </style>
