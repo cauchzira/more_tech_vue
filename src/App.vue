@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <section class="body">
-      <Sidebar /> 
+      <Sidebar v-if="hideSide" /> 
       <router-view/>
     </section>
   </div>
@@ -13,6 +13,11 @@ export default {
   name: 'App',
   components: {
     Sidebar
+  },
+  computed: {
+    hideSide() {
+      return this.$route.name !== 'Login'
+  }
   }
 }
 </script>
@@ -21,6 +26,10 @@ export default {
 @import '@/assets/styles/reset.scss';
 @import '@/assets/styles/vars.scss';
 #app {
- background-color: $main-bg;
+  height: 100vh;
+  background-color: $main-bg;
+}
+.body {
+  display: flex;
 }
 </style>
