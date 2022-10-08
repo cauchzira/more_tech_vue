@@ -1,142 +1,86 @@
 <template>
-  <div style=" width: 100%; display: flex; flex-direction: column; justify-content: flex-start; height: 80vh;">
+  <div style=" width: 100%; display: flex; flex-direction: column; justify-content: flex-start; height: 90vh;">
     <div class="account_medal">
         <div class="card">
-          <h3>Медали</h3>
+          <h3>Витрина медалей</h3>
           <p>Текст</p>
-          <p v-on:click="false">Развернуть</p>
+          <div class="account_medal_button">
+            <div class="account_medal_img">
+              <img :src="require('@/assets/img/bronze-medal.png')" alt="" srcset=""></img>
+            </div>
+            <div class="account_medal_img">
+              <img :src="require('@/assets/img/silver-medal.png')" alt="" srcset=""></img>
+            </div>
+            <div class="account_medal_img">
+              <img :src="require('@/assets/img/gold-medal.png')" alt="" srcset=""></img>
+            </div>
+            <div class="account_medal_img">
+              <img :src="require('@/assets/img/gold-medal.png')" alt="" srcset=""></img>
+            </div>
+            <div class="account_medal_img">
+              <img :src="require('@/assets/img/silver-medal.png')" alt="" srcset=""></img>
+            </div>
+            <div class="account_medal_img">
+              <img :src="require('@/assets/img/bronze-medal.png')" alt="" srcset=""></img>
+            </div>
+          </div>
         </div>
     </div>
     <div class="row">
-      <div class="column">
-        <div class="card">
-          <h3>Операция 1</h3>
-          <p>Текст</p>
-          <p v-on:click="false">Развернуть</p>
-          <div>
-            asdkksod
-          </div>
-        </div>
-      </div>
 
-      <div class="column">
-        <div class="card">
-          <h3>Операция 2</h3>
-          <p>Текст</p>
-          <p>Some text</p>
-        </div>
-      </div>
+      <AccountCard/>
+      <AccountCard/>
+      <AccountCard/>
+      <AccountCard/>
+      <AccountCard/>
+      <AccountCard/>
+      <AccountCard/>
+      <AccountCard/>
+      <AccountCard/>
+      <AccountCard/>
 
-      <div class="column">
-        <div class="card">
-          <h3>Операция 3</h3>
-          <p>Текст</p>
-          <p>Some text</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <div style="display: flex; justify-content: center">
-            <h3>Операция 4</h3>
-            <p></p>
-          </div>
-          <p>Текст</p>
-          <p>Some text</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <div style="display: flex; justify-content: center">
-            <h3>Операция 4</h3>
-            <p></p>
-          </div>
-          <p>Текст</p>
-          <p>Some text</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <div style="display: flex; justify-content: center">
-            <h3>Операция 4</h3>
-            <p></p>
-          </div>
-          <p>Текст</p>
-          <p>Some text</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <div style="display: flex; justify-content: center">
-            <h3>Операция 4</h3>
-            <p></p>
-          </div>
-          <p>Текст</p>
-          <p>Some text</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <div style="display: flex; justify-content: center">
-            <h3>Операция 4</h3>
-            <p></p>
-          </div>
-          <p>Текст</p>
-          <p>Some text</p>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <div style="display: flex; justify-content: center">
-            <h3>Операция 4</h3>
-            <p></p>
-          </div>
-          <p>Текст</p>
-          <p>Some text</p>
-        </div>
-      </div>
-
-</div>
+    </div>
   </div>
 </template>
-
 <script>
+import AccountCard from '@/components/Account_card/AccountCard.vue'
 export default {
-  name: 'Account'
+  name: 'Account',
+  components: {
+    AccountCard
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '@/assets/styles/vars.scss';
 * {
   box-sizing: border-box;
 }
 
-.account_name {
-  display:flex;
-  justify-content: center;
+.account_medal {
+  width: 100%;
+  padding: 0 10px;
   margin:50px 0;
 }
-.account_medal {
-  width: 100%
+
+.account_medal_button {
+  display: flex;
+  justify-content: center;
+  clear: both;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.column {
+.account_medal_img {
   float: left;
-  width: 25%;
-  padding: 0 10px;
-  margin-bottom: 20px;
+  margin: 0 10px;
 }
 
-.row {margin: 0 -5px;}
+.row {margin: 0 -5px; display: flex; flex-direction: column; align-items: center;}
 
 .row:after {
   content: "";
-  display: table;
   clear: both;
 }
 
@@ -146,12 +90,11 @@ export default {
     display: block;
     margin-bottom: 20px;
   }
+  .account_medal_button {
+  display: table;
+  clear: both;
+  width: 100%;
+  margin: 0 auto;
 }
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  text-align: center;
-  background-color: #f1f1f1;
 }
 </style>
