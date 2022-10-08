@@ -1,0 +1,35 @@
+@import '@/assets/styles/vars.scss';
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15% auto;
+  width: 400px;
+  height: 250px;
+  background-color: #4894d3;
+  color: #ffffff;
+  border-radius: 12px;
+  &_header {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+  }
+  &_header-text {
+    text-align: center;
+    font-size: 18px;
+  }
+  &_inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    input {
+      outline: none;
+      border: 2px solid #ffffff;
+      margin-top: 12px;
+      color: $input-color;
+      padding: 8px 4px;
+      border-radius: 4px;
+    }
+  }
+}
