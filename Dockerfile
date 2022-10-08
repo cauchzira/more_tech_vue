@@ -16,6 +16,7 @@ COPY . .
 # build app for production with minification
 RUN npm install -g @vue/cli-service
 RUN npm install -g @vue/cli
+RUN npm install -g @vue/cli-plugin-babel
 
 EXPOSE 8080
 CMD [ "npm", "run", "serve" ]
