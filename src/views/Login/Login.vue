@@ -1,8 +1,11 @@
 <template>
   <div class="login">
+    <div class="login_background">
+      <img :src="require('@/assets/img/login.png')" alt="" srcset="">
+    </div>
     <form @submit.prevent="loginHandler">
       <div class="login_header">
-        <span class="login_header-text">VNet</span>
+        <span class="login_header-text">ReadStarter</span>
       </div>
       <div class="login_inputs">
           <div class="login_inputs login_inputs-login">
@@ -14,6 +17,7 @@
             <input type="password">
           </div>
         </div>
+        <button class="btn">Войти</button>
     </form>
   </div>
 </template>

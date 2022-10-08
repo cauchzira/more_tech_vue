@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn btn--primary mx-auto" @click="$refs.modalName.openModal()">Создать события</button>
+    <button class="btn btn--primary mx-auto" @click="$refs.modalName.openModal()">Создать событие</button>
     <ModalMain ref="modalName">
       <template v-slot:header><Avatar class="modal_avatar"/></template>
       <template v-slot:body><textarea name="asds" id="" cols="30" rows="10" placeholder="Введите текст..."></textarea></template>
