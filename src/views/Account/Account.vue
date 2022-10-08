@@ -1,5 +1,5 @@
 <template>
-  <div style=" width: 100%; display: flex; flex-direction: column; justify-content: flex-start; height: 90vh;">
+  <div class="account">
     <div class="account_medal">
         <div class="card">
           <h3>Витрина медалей</h3>
@@ -57,6 +57,14 @@ export default {
 * {
   box-sizing: border-box;
 }
+.account {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+}
 
 .account_medal {
   width: 100%;
@@ -77,11 +85,12 @@ export default {
   margin: 0 10px;
 }
 
-.row {margin: 0 -5px; display: flex; flex-direction: column; align-items: center;}
-
-.row:after {
-  content: "";
-  clear: both;
+.row {
+  margin: 0 -5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -91,10 +100,10 @@ export default {
     margin-bottom: 20px;
   }
   .account_medal_button {
-  display: table;
-  clear: both;
-  width: 100%;
-  margin: 0 auto;
-}
+    display: table;
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 </style>

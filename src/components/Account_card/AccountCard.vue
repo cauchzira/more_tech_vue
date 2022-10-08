@@ -33,6 +33,7 @@ export default {
 @import '@/assets/styles/vars.scss';
 .card_info {
   cursor: pointer;
+  display: inline-flex;
   &:hover {
     color: $primary-color;
   }
